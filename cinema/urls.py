@@ -10,12 +10,12 @@ urlpatterns = [
     path("genres/", views.GenreList.as_view(), name="genre-list"),
     path("genres/<int:pk>/", views.GenreDetail.as_view(), name="genre-detail"),
     path(
-        "cinemahalls/",
+        "cinema_halls/",
         views.CinemaHallViewSet.as_view({"get": "list", "post": "create"}),
-        name="cinemahall-list",
+        name="cinema-hall-list",
     ),
     path(
-        "cinemahalls/<int:pk>/",
+        "cinema_halls/<int:pk>/",
         views.CinemaHallViewSet.as_view(
             {
                 "get": "retrieve",
@@ -24,7 +24,7 @@ urlpatterns = [
                 "delete": "destroy",
             }
         ),
-        name="cinemahall-detail",
+        name="cinema-hall-detail",
     ),
     path(
         "movies/",
@@ -46,3 +46,4 @@ urlpatterns = [
 ]
 
 app_name = "cinema"
+
