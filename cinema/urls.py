@@ -3,8 +3,6 @@ from django.urls import path
 from cinema import views
 
 urlpatterns = [
-    # path("movies/", MovieList.as_view(), name="movie-list"),
-    # path("movies/<int:pk>/", MovieDetail.as_view(), name="movie-detail"),
     path("actors/", views.ActorList.as_view(), name="actor-list"),
     path("actors/<int:pk>/", views.ActorDetail.as_view(), name="actor-detail"),
     path("genres/", views.GenreList.as_view(), name="genre-list"),
@@ -46,4 +44,3 @@ urlpatterns = [
 ]
 
 app_name = "cinema"
-
